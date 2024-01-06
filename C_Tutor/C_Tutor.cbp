@@ -30,6 +30,7 @@
 		</Build>
 		<Compiler>
 			<Add option="-Wall" />
+			<Add option="-std=c11" />
 		</Compiler>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
