@@ -64,3 +64,29 @@ int append_to_array(Array *array, int64_t data) {
     array->length++;
     return 0;
 }
+
+int insert_to_array(Array *array, size_t index, int64_t data) {
+    if(index > array->length) {
+        return INDEX_OUT_OF_BOUNDS;
+    }
+
+    if(array->length == array->allocated) {
+        int rc = extend_array(array);
+        if(rc != 0) {
+            return EXTENTION_ERROR;
+        }
+    }
+
+    for(size_t i = array->length; i > index; --i) {
+        if(index == array->length) {
+            append_to_array(array, data);
+        }
+        else {
+            array->dataArray[i] = array->dataArray[i - 1];
+        }
+    }
+
+    array->dataArray[index] = data;
+    array->length++;
+    return 0;
+}
