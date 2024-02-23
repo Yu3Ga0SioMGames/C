@@ -20,11 +20,19 @@ Array *create_array(size_t initial_size) {
 }
 
 void free_array(Array *array) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     free(array->dataArray);
     free(array);
 }
 
 void print_array(Array *array) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     for(size_t i = 0; i < array->length; ++i) {
         printf("%lld ", array->dataArray[i]);
     }
@@ -32,10 +40,18 @@ void print_array(Array *array) {
 }
 
 size_t array_length(Array *array) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     return array->length;
 }
 
 int extend_array(Array *array) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     size_t new_size = array->allocated * 2;
     int64_t *new_mem = (int64_t *)malloc(sizeof(int64_t) * new_size);
     if(new_mem == NULL) {
@@ -54,6 +70,10 @@ int extend_array(Array *array) {
 }
 
 int append_to_array(Array *array, int64_t data) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     if(array->length == array->allocated) {
         int rc = extend_array(array);
         if(rc != 0) {
@@ -66,13 +86,13 @@ int append_to_array(Array *array, int64_t data) {
 }
 
 int insert_to_array(Array *array, size_t index, int64_t data) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
     if(index > array->length) {
         return INDEX_OUT_OF_BOUNDS;
     }
-
-    /*if(index == array->length) {
-        append_to_array(array, data);
-    }*/
 
     if(array->length == array->allocated) {
         int rc = extend_array(array);
@@ -87,5 +107,18 @@ int insert_to_array(Array *array, size_t index, int64_t data) {
 
     array->dataArray[index] = data;
     array->length++;
+    return 0;
+}
+
+int get_from_array(Array *array, size_t index, int64_t *rv) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
+    if(index > array->length) {
+        return INDEX_OUT_OF_BOUNDS;
+    }
+
+    *rv = array->dataArray[index];
     return 0;
 }

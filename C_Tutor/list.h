@@ -35,4 +35,4 @@ int get_from_list(Node *, size_t, int64_t *);
 
 Node *get_node_from_list(Node *, size_t);
 
-#endif // LIST_H_INCLUDED
+#endif

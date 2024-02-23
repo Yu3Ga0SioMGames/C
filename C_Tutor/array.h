@@ -3,7 +3,8 @@
 
 #define EXTENTION_ERROR 1
 #define BAD_ALLOCATION_ERROR (EXTENTION_ERROR + 1)
-#define INDEX_OUT_OF_BOUNDS (EXTENTION_ERROR + 2)
+#define INDEX_OUT_OF_BOUNDS (BAD_ALLOCATION_ERROR + 1)
+#define ARRAY_NOT_PROVIDED (INDEX_OUT_OF_BOUNDS + 1)
 
 #include <stdio.h>
 #include <stdint.h>
@@ -30,4 +31,6 @@ int append_to_array(Array *, int64_t);
 
 int insert_to_array(Array *, size_t, int64_t);
 
-#endif // ARRAY_H_INCLUDED
+int get_from_array(Array *, size_t, int64_t *);
+
+#endif
