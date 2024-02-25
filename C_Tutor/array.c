@@ -85,6 +85,10 @@ int append_to_array(Array *array, int64_t data) {
     return 0;
 }
 
+int prepend_to_array(Array *array, int64_t data) {
+    return insert_to_array(array, 0, data);
+}
+
 int insert_to_array(Array *array, size_t index, int64_t data) {
     if(array == NULL) {
         return ARRAY_NOT_PROVIDED;
@@ -107,6 +111,23 @@ int insert_to_array(Array *array, size_t index, int64_t data) {
 
     array->dataArray[index] = data;
     array->length++;
+    return 0;
+}
+
+int delete_from_array(Array *array, size_t index) {
+    if(array == NULL) {
+        return ARRAY_NOT_PROVIDED;
+    }
+
+    if(index > array->length) {
+        return INDEX_OUT_OF_BOUNDS;
+    }
+
+    for(size_t i = index; i < array->length - 1; ++i) {
+        array->dataArray[i] = array->dataArray[i + 1];
+    }
+
+    array->length--;
     return 0;
 }
 

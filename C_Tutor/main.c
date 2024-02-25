@@ -37,6 +37,15 @@ int main() {
     insert_to_array(array, 2, -2);
     print_array(array); // -1 0 -2 1 2 7 3 4 5 ...
 
+    delete_from_array(array, 0);
+    print_array(array); // 0 -2 1 2 7 3 4 5 ...
+
+    delete_from_array(array, 4);
+    print_array(array); // 0 -2 1 2 3 4 5 ...
+
+    delete_from_array(array, 6);
+    print_array(array); // 0 -2 1 2 3 4 ...
+
     int64_t rv_data;
 
     get_from_array(array, 2, &rv_data);

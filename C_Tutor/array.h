@@ -29,7 +29,11 @@ int extend_array(Array *);
 
 int append_to_array(Array *, int64_t);
 
+int prepend_to_array(Array *, int64_t);
+
 int insert_to_array(Array *, size_t, int64_t);
+
+int delete_from_array(Array *, size_t);
 
 int get_from_array(Array *, size_t, int64_t *);
 
