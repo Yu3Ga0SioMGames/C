@@ -11,3 +11,24 @@
 	<stdlib.h>
 	<stdint.h>
 
+1706814863 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.c
+	"list.h"
+
+1708718233 /home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.h
+	<stdio.h>
+	<stdlib.h>
+	<stdint.h>
+
+1708885995 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/main.c
+	<stdint.h>
+	"array.h"
+
+1708885995 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/array.c
+	<stdio.h>
+	<stdlib.h>
+	"array.h"
+
+1708885995 /home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/array.h
+	<stdio.h>
+	<stdint.h>
+
