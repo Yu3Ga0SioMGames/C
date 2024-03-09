@@ -3,7 +3,6 @@
 
 #include "array.h"
 
-
 Array *create_array(size_t initial_size) {
     Array *new_array = (Array *)malloc(sizeof(Array));
     if(new_array == NULL) {
@@ -16,6 +15,11 @@ Array *create_array(size_t initial_size) {
     }
     new_array->allocated = initial_size;
     new_array->length = 0;
+
+    new_array->mtbl.print = (print_ptr)print_array;
+    new_array->mtbl.append = (append_ptr)append_to_array;
+    new_array->mtbl.length = (length_ptr)array_length;
+    new_array->mtbl.prepend = (prepend_ptr)prepend_to_array;
     return new_array;
 }
 

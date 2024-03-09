@@ -8,7 +8,6 @@
 #define ND_CREATE_ERROR 1
 #define BAD_POS_ERROR (ND_CREATE_ERROR + 1)
 
-
 typedef
 struct _node {
     int64_t data;
