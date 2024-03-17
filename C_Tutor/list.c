@@ -1,5 +1,20 @@
 #include "list.h"
 
+List *create_list() {
+    List *list = (List *)malloc(sizeof(List));
+    if(list == NULL) {
+        return NULL;
+    }
+
+    list->length = 0;
+    list->first = NULL;
+    list->last = NULL;
+    return list;
+}
+
+List free_list(List *list) {
+
+}
 
 Node *create_node(int64_t input_data) {
     Node *node = (Node *)malloc(sizeof(Node));

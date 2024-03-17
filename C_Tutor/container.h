@@ -28,5 +28,8 @@ void print(Container obj);
 int append(Container obj, int64_t data);
 int prepend(Container obj, int64_t data);
 size_t length(Container obj);
+int insert(Container obj, size_t index, int64_t data);
+int delete(Container obj, size_t index);
+int get(Container obj, size_t index, int64_t *rv);
 
 #endif

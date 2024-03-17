@@ -20,6 +20,9 @@ Array *create_array(size_t initial_size) {
     new_array->mtbl.append = (append_ptr)append_to_array;
     new_array->mtbl.length = (length_ptr)array_length;
     new_array->mtbl.prepend = (prepend_ptr)prepend_to_array;
+    new_array->mtbl.insert = (insert_ptr)insert_to_array;
+    new_array->mtbl.delete = (delete_ptr)delete_from_array;
+    new_array->mtbl.get = (get_ptr)get_from_array;
     return new_array;
 }
 

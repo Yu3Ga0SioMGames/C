@@ -19,37 +19,37 @@ int main() {
 
     print(array); // 0 1 2 3 4 ...
 
-    int rc = insert_to_array(array, 5, 5);
+    int rc = insert(array, 5, 5);
     if(rc != 0) {
         return EXTENTION_ERROR;
     }
 
     print(array); // 0 1 2 3 4 5 ...
 
-    insert_to_array(array, 7, 7);
+    insert(array, 7, 7);
     print(array); // 0 1 2 3 4 5 ...
 
-    insert_to_array(array, 3, 7);
+    insert(array, 3, 7);
     print(array); // 0 1 2 7 3 4 5 ...
 
-    insert_to_array(array, 0, -1);
+    insert(array, 0, -1);
     print(array); // -1 0 1 2 7 3 4 5 ...
 
-    insert_to_array(array, 2, -2);
+    insert(array, 2, -2);
     print(array); // -1 0 -2 1 2 7 3 4 5 ...
 
-    delete_from_array(array, 0);
+    delete(array, 0);
     print(array); // 0 -2 1 2 7 3 4 5 ...
 
-    delete_from_array(array, 4);
+    delete(array, 4);
     print(array); // 0 -2 1 2 3 4 5 ...
 
-    delete_from_array(array, 6);
+    delete(array, 6);
     print(array); // 0 -2 1 2 3 4 ...
 
     int64_t rv_data;
 
-    get_from_array(array, 2, &rv_data);
+    get(array, 2, &rv_data);
 
     printf("\n%lld\n", rv_data);
 
