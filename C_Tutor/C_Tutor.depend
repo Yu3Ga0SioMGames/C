@@ -11,17 +11,18 @@
 	<stdlib.h>
 	<stdint.h>
 
-1710696146 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.c
+1711227254 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.c
 	"list.h"
 
-1710695943 /home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.h
+1711224191 /home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/list.h
 	<stdio.h>
 	<stdlib.h>
 	<stdint.h>
 	"container.h"
 
-1710523596 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/main.c
+1711227418 source:/home/yu3ga/Projects/Programming/ScriptsCode/C-main/C/C_Tutor/main.c
 	<stdint.h>
+	"list.h"
 	"array.h"
 	"container.h"
 

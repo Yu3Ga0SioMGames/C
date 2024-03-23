@@ -1,28 +1,38 @@
 #include <stdint.h>
 
+#include "list.h"
 #include "array.h"
 #include "container.h"
 
 int main() {
-    Array *array;
+    // Array *array;
 
-    size_t initial_size;
+    List *array;
 
-    printf("Введите размер массива: ");
+    size_t initial_size = 5;
+
+    /* printf("Введите размер массива: ");
     scanf("%zu", &initial_size);
-    array = create_array(initial_size);
+    array = create_array(initial_size); */
+
+    array = create_list();
+
+    List *list = array;
 
     for(int i = 0; i < initial_size; ++i) {
-        //append_to_array(array, i);
+
+        // append_to_array(array, i);
+
         append(array, i);
     }
 
     print(array); // 0 1 2 3 4 ...
 
     int rc = insert(array, 5, 5);
-    if(rc != 0) {
+
+    /* if(rc != 0) {
         return EXTENTION_ERROR;
-    }
+    } */
 
     print(array); // 0 1 2 3 4 5 ...
 
@@ -53,6 +63,8 @@ int main() {
 
     printf("\n%lld\n", rv_data);
 
-    free_array(array);
+    free_list(array);
+
+    // free_array(array);
     return 0;
 }
