@@ -9,9 +9,11 @@
 #include <stdio.h>
 #include <stdint.h>
 
+#include "container.h"
 
 typedef
 struct _Array {
+    ContainerMTable mtbl;
     int64_t *dataArray;
     size_t length;
     size_t allocated;

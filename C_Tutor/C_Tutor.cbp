@@ -36,6 +36,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="array.h" />
+		<Unit filename="container.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="container.h" />
 		<Unit filename="list.c">
 			<Option compilerVar="CC" />
 		</Unit>
